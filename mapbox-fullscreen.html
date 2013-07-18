@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
+    <script src='http://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.js'></script>
+    <link href='http://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.css' rel='stylesheet' />
+    <!--[if lte IE 8]>
+        <link href='http://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.ie.css' rel='stylesheet' >
+    <![endif]-->
+  
+    <style>
+        #map-wrapper-div { 
+            width: 600px;
+            height: 400px;
+        }
+
+        #map-div {
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+        }
+        
+        :-webkit-full-screen #map-wrapper-div {
+            top:0;
+            width: 100%;
+            height: 100%;
+        }
+  	
+    </style>    
+	
+</head>
+<body>
+    <button onclick="full()">Fullscreen</button>
+    <div id='map-wrapper-div'>
+        <div id='map-div'></div>
+    </div> 
+	  
+<script type='text/javascript'>
+    var map = L.mapbox.map('map-div', 'examples.map-uci7ul8p');
+</script>
+
+<script type='text/javascript'>	
+	// Fullscreen
+    function full() {
+        var elem = document.getElementById("map-div");
+        if (elem.requestFullscreen) {
+            elem.requestFullscreen();
+        } else if (elem.mozRequestFullScreen) {
+            elem.mozRequestFullScreen();
+        } else if (elem.webkitRequestFullscreen) {
+            elem.webkitRequestFullscreen();
+        }};
+</script>
+ 
+</body>
+</html>
