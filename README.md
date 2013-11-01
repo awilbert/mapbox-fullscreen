@@ -4,8 +4,9 @@ A simple way to implement a true fullscreen map viewing experience using HTML 5'
 
 The trick is to wrap the map inside of two divs. The outer div will provide the positioning and size on the webpage. The inner div will scale up with requestFullScreen().
 
-###View [the map][view].###
+This uses a technique commonly applied to full screen video. Browsers handle the transition in and out of full-screen mode differently. Most use the 'esc' key to return to the normal view. Chrome displays a popover dialog explaining how to get out of the frame, Safari typically does not.
 
+###View [the map][view].###
 
 [view]: https://rawgithub.com/awilbert/mapbox-fullscreen/master/mapbox-fullscreen.html
 ---
